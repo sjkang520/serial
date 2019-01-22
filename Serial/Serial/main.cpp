@@ -1,0 +1,50 @@
+#include "Serial.h"
+using namespace std;
+unsigned char data[4][16] = { 0x63, 0x7c, 0x77, 0x7b, 0xf2, 0x6b, 0x6f, 0xc5, 0x30, 0x01, 0x67, 0x2b, 0xfe, 0xd7, 0xab, 0x76,
+						      0xca, 0x82, 0xc9, 0x7d, 0xfa, 0x59, 0x47, 0xf0, 0xad, 0xd4, 0xa2, 0xaf, 0x9c, 0xa4, 0x72, 0xc0,
+                              0xb7, 0xfd, 0x93, 0x26, 0x36, 0x3f, 0xf7, 0xcc, 0x34, 0xa5, 0xe5, 0xf1, 0x71, 0xd8, 0x31, 0x15,
+                              0x04, 0xc7, 0x23, 0xc3, 0x18, 0x96, 0x05, 0x9a, 0x07, 0x12, 0x80, 0xe2, 0xeb, 0x27, 0xb8, 0x75, };
+int main()
+{
+	unsigned char buffer[4][16];
+	Serial test;
+	string str = "COM3";
+
+	bool flag=test.OpenSeialPort(str.c_str());
+	if (!flag)
+	{
+		printf("open serial error\n");
+		return 0;
+	}
+	test.OpenListenThread();
+	unsigned char senddata[64];
+	senddata[0] = 1;
+	bool send_flag = test.send_cmd(0x46, 1, senddata);
+	if (!send_flag)
+	{
+		printf("read_card sendcmd error\n");
+	//	return send_flag;
+	}
+	Sleep(1000);
+	/*flag=test.write_card(data);
+	if (flag != 0)
+	{
+		printf("write card error\n");
+		return 0;
+	}
+	Sleep(200);
+	flag=test.read_card(buffer);
+	if (flag != 0)
+	{
+		printf("read card error\n");
+		return 0;
+	}
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 16; j++)
+			printf("%x ", buffer[i][j]);
+		printf("\n");
+	}*/
+	while (1);
+	system("pause");
+}

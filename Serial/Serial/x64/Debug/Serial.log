@@ -1,0 +1,14 @@
+﻿生成启动时间为 2018/12/7 9:04:30。
+     1>项目“C:\Users\ksj\Desktop\Serial\Serial\Serial.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W1 /WX- /O2 /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt main.cpp
+         main.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\ksj\Desktop\Serial\x64\Debug\Serial.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:\Users\ksj\Desktop\Serial\x64\Debug\Serial.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\ksj\Desktop\Serial\x64\Debug\Serial.lib" /MACHINE:X64 x64\Debug\main.obj
+         x64\Debug\Serial.obj
+         Serial.vcxproj -> C:\Users\ksj\Desktop\Serial\x64\Debug\Serial.exe
+     1>已完成生成项目“C:\Users\ksj\Desktop\Serial\Serial\Serial.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.67
